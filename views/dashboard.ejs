@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Host Entry</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='/stylesheets/dashboard.css'>
+</head>
+
+<body>
+    <h1 class="intro">Dashboard</h1>
+
+    <table class="container">
+        <thead>
+            <tr>
+                <th>
+                    <h1>Visitor</h1>
+                </th>
+                <th>
+                    <h1>Phone</h1>
+                </th>
+                <th>
+                    <h1>Email</h1>
+                </th>
+                <th>
+                    <h1>Check-in Time</h1>
+                </th>
+                <th>
+                    <h1>Check-out Time</h1>
+                </th>
+                <th>
+                    <h1>Host</h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% visitors.forEach(function(visitor){ %>
+                <tr>
+                    <td>
+                        <% visitor.name %>
+                    </td>
+                    <td>
+                        <% visitor.Phone %>
+                    </td>
+                    <td>
+                        <% visitor.email %>
+                    </td>
+                    <td>
+                        <% visitor.check_in_time %>
+                    </td>
+                    <td>
+                        <% visitor.check_out_time %>
+                    </td>
+                    <td>
+                        <% visitor.host_allotted.name %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+    <a href="/" style="
+    margin-left: 7%;
+    margin-top: 10%;
+    padding-top: 50px;
+    font-size: 15px;
+    text-align: center;
+    ">Go back</a>
+
+</body>
+
+</html>
